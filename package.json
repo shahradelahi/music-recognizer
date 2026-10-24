@@ -1,6 +1,6 @@
 {
   "name": "music-recognizer",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Song recognition library with Shazam, AudD, ACRCloud, streaming links, and lyrics.",
   "keywords": [
     "music-recognition",
