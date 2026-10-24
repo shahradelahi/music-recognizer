@@ -103,15 +103,9 @@ export class OdesliTrackLinksFetcher {
   async fetch(
     trackOrUrl: Track | string
   ): Promise<{ trackLinks: Partial<Record<MusicService, string>>; artworkUrl?: string | null }> {
-    let queryUrl: string | null = null;
-    let existingArtwork: string | null = null;
-
-    if (typeof trackOrUrl === 'string') {
-      queryUrl = trackOrUrl;
-    } else {
-      existingArtwork = trackOrUrl.artworkUrl ?? null;
-      queryUrl = this.getPriorityQueryUrl(trackOrUrl.trackLinks);
-    }
+    const queryUrl =
+      typeof trackOrUrl === 'string' ? trackOrUrl : this.getPriorityQueryUrl(trackOrUrl.trackLinks);
+    const existingArtwork = typeof trackOrUrl === 'string' ? null : (trackOrUrl.artworkUrl ?? null);
 
     if (!queryUrl) {
       return { trackLinks: {} };
