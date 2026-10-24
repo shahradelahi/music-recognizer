@@ -54,7 +54,7 @@
     "@shahrad/eslint-config": "^1.0.1",
     "@shahrad/prettier-config": "^1.2.2",
     "@shahrad/tsconfig": "^1.2.0",
-    "@types/node": "^24.7.0",
+    "@types/node": "^26.6.5",
     "eslint": "^9.37.0",
     "globals": "^16.4.0",
     "prettier": "^3.6.2",
